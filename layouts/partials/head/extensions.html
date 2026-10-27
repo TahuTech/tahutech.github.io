@@ -1,0 +1,25 @@
+{{/*
+    Override dari themes/hugo-profile/layouts/partials/head/extensions.html.
+    Menambahkan animasi AOS (fade-up halus) pada section halaman utama.
+    Atribut data-aos dipasang lewat JavaScript, jadi partial tema tidak perlu disalin.
+    Matikan dengan `params.aos: false` di hugo.yaml.
+*/}}
+{{ if and .IsHome (ne .Site.Params.aos false) }}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      integrity="sha384-/rJKQnzOkEo+daG0jMjU1IwwY9unxt1NBw3Ef2fmOJ3PW/TfAg2KXVoWwMZQZtw9" crossorigin="anonymous">
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+        integrity="sha384-n1AULnKdMJlK1oQCLNDL9qZsDgXtH6jRYFCpBtWFc+a9Yve0KSoMn575rk755NJZ" crossorigin="anonymous"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        if (typeof AOS === "undefined") return;
+        if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+        var sections = ["#about", "#experience", "#education", "#projects", "#achievements", "#contact"];
+        document.querySelectorAll(sections.join(",")).forEach(function (el) {
+            el.setAttribute("data-aos", "fade-up");
+        });
+
+        AOS.init({ duration: 700, easing: "ease-out-cubic", offset: 60, once: true });
+    });
+</script>
+{{ end }}
