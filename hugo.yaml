@@ -62,7 +62,7 @@ Menus:
 
 params:
   title: "Nur Ali Sholikhin"
-  description: "TODO: tulis deskripsi singkat situs ini (1-2 kalimat, muncul di hasil pencarian Google)"
+  description: "Nur Ali Sholikhin, a software engineer from Surabaya building practical web apps with Go, Python (Django), TypeScript and PHP. Portfolio and blog."
   # staticPath: ""  # The path to serve the static files from
   favicon: "/fav.png"
 
@@ -138,8 +138,8 @@ params:
     intro: "Hello, my name is"
     title: "Nur Ali Sholikhin."
     subtitle: "I'm a Software Engineer"
-    content: "I like to Code, Design, Innovate and Experiment. I am an enthusiastic and a social person who loves to take up new challenges and learn new skills. I love meeting new people, exchanging ideas and spreading knowledge and positivity."
-    image: /images/hero.svg
+    content: "I build practical web applications for everyday business needs, from inventory and sales tracking to cooperative bookkeeping, using Go, Python and TypeScript."
+    image: /images/me.jpg
     bottomImage:
       enable: true
     # roundImage: true # Make hero image circular | default false
@@ -154,10 +154,8 @@ params:
       fontAwesomeIcons:
         - icon: fab fa-github
           url: https://github.com/TahuTech
-        # TODO: isi URL LinkedIn yang benar lalu hapus tanda # di dua baris bawah.
-        # (Di footer sudah ada: https://www.linkedin.com/in/nur-ali-sholikhin-78a795247/)
-        # - icon: fab fa-linkedin
-        #   url: https://www.linkedin.com/in/TODO/
+        - icon: fab fa-linkedin
+          url: https://www.linkedin.com/in/nur-ali-sholikhin-78a795247/
       # customIcons:
       #   - icon: /fav.png
       #     url: "https://example.com"
@@ -166,21 +164,23 @@ params:
   about:
     enable: true
     title: "About Me"
-    image: "/images/me.png" # TODO: ganti static/images/me.png dengan foto Anda (sekarang avatar contoh dari tema)
+    image: "/images/me.jpg" # foto profil GitHub; ganti file ini untuk memakai foto lain
     content: |-
-      I am Programmer. I like to Code, Design, Innovate and Experiment. I am an enthusiastic and a social person who loves to take up new challenges and learn new skills. I love meeting new people, exchanging ideas and spreading knowledge and positivity.
-      <!-- TODO: tambahkan paragraf tentang apa yang sedang Anda kerjakan sekarang. -->
+      I am a software engineer based in Surabaya, Indonesia, with a Bachelor's degree in Informatics Engineering from Universitas Wijaya Putra. I like to code, design and experiment, and I learn new tools best by building real things with them.
+
+      Most of my recent work is practical business software: a sales and receivables system in Go and HTMX, a cooperative transaction system in Django, an inventory app that maps every item down to its shelf bin, and a browser-only tool that turns bank statements into Excel files. I care about apps that are simple to run, light on resources and respectful of their users' data.
     skills:
       enable: true
-      # TODO: sesuaikan daftar teknologi di bawah (masih daftar contoh dari tema)
       title: "Here are a few technologies I've been working with recently:"
       items:
-        - "HTML"
-        - "CSS"
-        - "JavaScript"
+        - "Go"
+        - "Python (Django)"
+        - "TypeScript"
         - "React"
-        - "Node"
-        - "Express"
+        - "Vue.js"
+        - "PHP (Laravel)"
+        - "PostgreSQL"
+        - "Docker"
 
   # Experience
   # Data contoh tema (Facebook, Amazon, Apple, Netflix, Google) sudah dihapus.
@@ -235,23 +235,68 @@ params:
         # image: /images/achievement.jpg
 
   # projects
-  # Data contoh tema (proyek milik gurusabarish) sudah dihapus.
-  # TODO: isi proyek Anda, lalu ubah enable menjadi true.
+  # Disusun dari README repo GitHub. Gambar (opsional): simpan di static/images/projects/
+  # lalu tambahkan `image: /images/projects/nama-file.png` pada item.
   projects:
-    enable: false
+    enable: true
     # title: "Custom Name"
     items:
-      - title: "TODO: Nama proyek"
-        content: "TODO: deskripsi singkat proyek"
-        # image: /images/projects/nama-proyek.png
-        # featured:
-        #   name: Demo
-        #   link: https://example.com
+      - title: Mutasi ke Excel
+        content: Converts bank e-statements from PDF to Excel (.xlsx) right in the browser, with support for BCA, BNI, BRI and Mandiri. No server, no upload, no sign-up; the PDF never leaves the user's device.
+        featured:
+          name: Demo
+          link: https://mutasi-rekening-excel.netlify.app/
         badges:
-          - "TODO"
+          - "JavaScript"
+          - "HTML"
+          - "CSS"
         links:
           - icon: fab fa-github
-            url: https://github.com/TahuTech
+            url: https://github.com/TahuTech/mutaxcle
+
+      - title: Rekapin
+        content: Sales and receivables system for admins covering customers, installment payments, invoices, payoff receipts, and recaps per customer or period with CSV export. Ships as a single static binary designed for a 1 GB VPS.
+        badges:
+          - "Go"
+          - "HTMX"
+          - "Tailwind CSS"
+          - "PostgreSQL"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/TahuTech/rekapin-go
+
+      - title: SakuKoperasi
+        content: Transaction recording system for a cooperative (koperasi), containerized with Docker for both development and production (Gunicorn and WhiteNoise).
+        badges:
+          - "Django"
+          - "PostgreSQL"
+          - "Docker"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/TahuTech/sakukoperasi-django
+
+      - title: LetakIn
+        content: Inventory app for workshop shelves that tracks items, bin locations and low stock on a customizable visual shelf grid, so you can find things without unboxing everything.
+        badges:
+          - "React"
+          - "TypeScript"
+          - "Express"
+          - "Prisma"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/TahuTech/letakin-app
+
+      - title: Stunting Classification
+        content: Web app for recording toddler data and classifying stunting with the K-Nearest Neighbors algorithm, with a Vue.js frontend and a Laravel REST API.
+        badges:
+          - "Vue.js"
+          - "Laravel"
+          - "KNN"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/TahuTech/stunting-client
+          - icon: fas fa-server
+            url: https://github.com/TahuTech/stunting-api
 
   #Contact
   contact:
