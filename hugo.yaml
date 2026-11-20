@@ -65,6 +65,8 @@ params:
   description: "Nur Ali Sholikhin, a software engineer from Surabaya building practical web apps with Go, Python (Django), TypeScript and PHP. Portfolio and blog."
   # staticPath: ""  # The path to serve the static files from
   favicon: "/fav.png"
+  # Gambar preview saat link dibagikan (WhatsApp, LinkedIn, dll.). Idealnya 1200x630.
+  images: ["/images/me.jpg"]
 
   # Whether to serve bootstrap css and js files from CDN or not. Can be set to true, "css" or "js" to choose between
   # serving both, only the css, or only the js files through the CDN. Any other value will make so that CDN is not used.
@@ -211,11 +213,9 @@ params:
           name: "Universitas Wijaya Putra Surabaya"
           url: "https://uwp.ac.id/"
         date: "2018 - 2022"
-        GPA: "3.73 out of 4.0" # TODO: pastikan IPK ini benar
-        # Teks contoh tema (paper ACM, lorem ipsum, link example.com) sudah dihapus.
-        # TODO (opsional): tambahkan content, misalnya judul skripsi atau organisasi.
-        # content: |-
-        #   Judul skripsi: ...
+        GPA: "3.73 out of 4.0"
+        content: |-
+          Final project published in the Journal of System Engineering and Technological Innovation (2022): a web application for stunting classification in toddlers using K-Nearest Neighbours.
       - title: "Senior High School"
         school:
           name: "SMAN 12 Surabaya"
@@ -223,16 +223,19 @@ params:
         date: "2016 - 2018"
 
   # Achievements
-  # Data contoh tema (Google Kickstart, Facebook Hackathon, dll.) sudah dihapus.
-  # TODO: isi pencapaian Anda, lalu ubah enable menjadi true.
+  # Kartu dengan `url` bisa diklik. Link kredensial HackerRank bisa ditambahkan
+  # sebagai `url:` (salin dari tombol "Tampilkan kredensial" di LinkedIn).
   achievements:
-    enable: false
-    # title: "Custom Name"
+    enable: true
+    title: "Publications & Certifications"
     items:
-      - title: "TODO: Nama pencapaian"
-        content: "TODO: deskripsi singkat"
-        # url: https://example.com
-        # image: /images/achievement.jpg
+      - title: "Journal Publication (2022)"
+        content: "Aplikasi Web Untuk Klasifikasi Stunting Pada Balita Dengan Menggunakan Metode K-Nearest Neighbours (Studi Kasus Posyandu Jawu Kidul). Journal of System Engineering and Technological Innovation, Vol. 1 No. 2."
+        url: https://jurnal.uwp.ac.id/ft/index.php/JISTI/article/view/23
+      - title: "Copyright Registration (HKI)"
+        content: "Registered with DJKI, No. EC00202285379 (Nov 2022), for the stunting classification web application."
+      - title: "HackerRank Skill Certificates"
+        content: "CSS · Node.js (Basic) · React (Basic). Issued Nov 2022."
 
   # projects
   # Disusun dari README repo GitHub. Gambar (opsional): simpan di static/images/projects/
@@ -297,6 +300,8 @@ params:
             url: https://github.com/TahuTech/stunting-client
           - icon: fas fa-server
             url: https://github.com/TahuTech/stunting-api
+          - icon: fas fa-book
+            url: https://jurnal.uwp.ac.id/ft/index.php/JISTI/article/view/23
 
   #Contact
   contact:
@@ -322,8 +327,6 @@ params:
     socialNetworks:
       github: https://github.com/TahuTech
       linkedin: https://www.linkedin.com/in/nur-ali-sholikhin-78a795247/
-      # instagram: https://instagram.com/TODO  # TODO: isi lalu hapus tanda #
-      facebook: https://www.facebook.com/ali.935563/
 
   # List pages like blogs and posts
   listPages:
