@@ -176,31 +176,44 @@ params:
       title: "Here are a few technologies I've been working with recently:"
       items:
         - "Go"
+        - "Ruby on Rails"
         - "Python (Django)"
         - "TypeScript"
         - "React"
-        - "Vue.js"
+        - "Vue.js / Nuxt"
+        - "Tailwind CSS"
         - "PHP (Laravel)"
         - "PostgreSQL"
         - "Docker"
 
   # Experience
-  # Data contoh tema (Facebook, Amazon, Apple, Netflix, Google) sudah dihapus.
-  # TODO: isi pengalaman Anda dengan format di bawah, lalu ubah enable menjadi true.
   experience:
-    enable: false
+    enable: true
     # title: "Custom Name"
     items:
-      - company: "TODO: Nama Perusahaan"
-        companyUrl: "https://example.com"
+      - company: "LegalSpace"
+        companyUrl: "https://legalspace.id"
         jobs:
-          - name: "TODO: Jabatan"
-            date: "TODO: Bulan Tahun - present"
+          - name: "Full-Stack Web Developer"
+            date: "May 2023 - present"
             content: |
-              TODO: ringkasan pekerjaan.
+              Developer of legalspace.id, a platform that connects people who need legal assistance or consultation with lawyers matching their expertise. Joined mid-project in a three-person team with a project manager and a DevOps engineer, and handle most of the coding across the backend and the frontend.
 
-              - TODO: pencapaian 1
-              - TODO: pencapaian 2
+              - Redesigned the entire user interface with Tailwind CSS, making the site more consistent, responsive and easier to use.
+              - Found and fixed bugs across the Laravel application, making the platform noticeably more stable.
+              - Ship changes through review with the project manager and DevOps engineer before release.
+
+      - company: "Bolo Tresno Wedding"
+        companyUrl: "https://bolotresnowedding.com"
+        jobs:
+          - name: "Freelance Full-Stack Developer"
+            date: "Aug 2026 - present"
+            content: |
+              Sole developer of bolotresnowedding.com, a digital wedding invitation and wedding organizer business in Surabaya. Built and maintain the entire application, from database to UI.
+
+              - Built the customer-facing site: template catalog, online ordering and payment flow, customer accounts and an affiliate program.
+              - Developed digital invitations with guest lists and personal links, RSVP, guest wishes, music, countdown, maps and gallery.
+              - Designed the PostgreSQL schema with Prisma migrations and containerized the full stack with Docker Compose.
 
   # Education
   education:
@@ -244,6 +257,43 @@ params:
     enable: true
     # title: "Custom Name"
     items:
+      - title: Fotamu
+        image: /images/projects/fotamu.jpg
+        content: Event photo-sharing service where guests scan a QR code and upload photos from their phone browser, with no app or account. Organizers approve photos, run a live slideshow, add frames and filters, and download everything as a ZIP. Built solo from scratch on Rails 8 with the Solid stack (no Redis), photo storage on Cloudflare R2, Midtrans QRIS integration, and single-VPS deployment with Kamal 2.
+        featured:
+          name: Live
+          link: https://fotamu.id
+        badges:
+          - "Ruby on Rails 8"
+          - "Hotwire"
+          - "PostgreSQL"
+          - "Cloudflare R2"
+          - "Kamal"
+
+      - title: Bolo Tresno Wedding
+        image: /images/projects/bolotresno.jpg
+        content: Digital wedding invitation platform with a template catalog, online ordering and payment, customer accounts, an affiliate program, and invitations featuring RSVP, guest wishes and personal guest links. Built solo, end to end.
+        featured:
+          name: Live
+          link: https://bolotresnowedding.com
+        badges:
+          - "Nuxt 3"
+          - "Vue 3"
+          - "Tailwind CSS"
+          - "PostgreSQL"
+          - "Prisma"
+          - "Docker"
+
+      - title: LegalSpace
+        image: /images/projects/legalspace.jpg
+        content: Legal services platform for video-call consultations with lawyers and instant document templates. At work I redesigned the entire UI with Tailwind CSS and handle most bug fixing across the Laravel application.
+        featured:
+          name: Live
+          link: https://legalspace.id
+        badges:
+          - "Laravel"
+          - "Tailwind CSS"
+
       - title: Mutasi ke Excel
         content: Converts bank e-statements from PDF to Excel (.xlsx) right in the browser, with support for BCA, BNI, BRI and Mandiri. No server, no upload, no sign-up; the PDF never leaves the user's device.
         featured:
